@@ -22,7 +22,7 @@ export function Header({
       </div>
       <header className="site-header">
         <a href="/" className="brand">
-          <span className="brand-mark">f.</span>
+          <span className="brand-mark">e.</span>
           {name}
         </a>
         <nav aria-label="Main navigation">

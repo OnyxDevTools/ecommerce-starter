@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "ecommerce-starter",
-  "name": "Ecommerce Starter",
+  "name": "eCommerce Starter",
   "description": "An Onyx-backed storefront and store desk with products, carts, inventory, orders and optional hosted checkout.",
   "tags": ["nextjs", "typescript", "ecommerce", "onyx"],
   "useWhen": [

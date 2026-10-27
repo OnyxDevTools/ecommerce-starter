@@ -1,8 +1,8 @@
-# Ecommerce Starter
+# eCommerce Starter
 
-A small, complete storefront and store desk in **one Next.js App Router / Node.js application**, backed by Onyx. The Fieldwork Supply showcase uses a warm ivory, forest-green and orange theme, original bundled product illustrations, responsive layouts and a focused eight-product collection.
+A small, complete storefront and store desk in **one Next.js App Router / Node.js application**, backed by Onyx. The eCommerce Starter showcase uses a warm ivory, forest-green and orange theme, original bundled product illustrations, responsive layouts and a focused eight-product collection.
 
-![Fieldwork Supply storefront](public/template-preview.png)
+![eCommerce Starter storefront](public/template-preview.png)
 
 ## What is included
 

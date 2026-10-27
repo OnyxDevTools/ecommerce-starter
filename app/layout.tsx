@@ -14,7 +14,7 @@ export const metadata = {
     process.env.APP_ENV === "production"
       ? undefined
       : { index: false, follow: false },
-  title: { default: "Fieldwork Supply", template: "%s · Fieldwork Supply" },
+  title: { default: "eCommerce Starter", template: "%s · eCommerce Starter" },
   description: "Considered essentials for everyday living.",
 };
 export default function Layout({ children }: { children: ReactNode }) {

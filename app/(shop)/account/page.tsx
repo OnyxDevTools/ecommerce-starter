@@ -15,7 +15,7 @@ export default async function Page() {
   const orders = await all(services().store, "Order", { customerId: user.id });
   return (
     <div className="container narrow">
-      <span className="eyebrow">YOUR CORNER OF FIELDWORK</span>
+      <span className="eyebrow">YOUR ACCOUNT</span>
       <h1>Hello, {user.name.split(" ")[0]}.</h1>
       <SignOut />
       <h2>Your orders</h2>

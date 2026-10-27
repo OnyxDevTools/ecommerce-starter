@@ -109,7 +109,7 @@ export async function seed(store: Store) {
           summary,
           categoryId,
           description: description(
-            `${summary} Thoughtfully shaped for everyday use, with a simple finish and careful proportions. Keep clean with a soft cloth and store in a dry place. This representative sample product is part of the Fieldwork collection.`,
+            `${summary} Thoughtfully shaped for everyday use, with a simple finish and careful proportions. Keep clean with a soft cloth and store in a dry place. This representative sample product is part of the eCommerce Starter collection.`,
           ),
           images: JSON.stringify([
             `/products/${id}.webp`,

@@ -26,7 +26,7 @@ export function OrderEmail({
         style={{ backgroundColor: "#f6f4ec", fontFamily: "Arial,sans-serif" }}
       >
         <Container style={{ padding: "32px", backgroundColor: "#ffffff" }}>
-          <Text>FIELDWORK SUPPLY</Text>
+          <Text>eCommerce Starter</Text>
           <Heading>
             {order.mode === "demo"
               ? "Your demonstration order"

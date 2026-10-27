@@ -89,7 +89,9 @@ test("administration creates a draft product, variant, publishes it and updates 
   await expect(page.getByRole("heading", { name, exact: true })).toBeVisible();
   await expect(page.getByText("From $32.00")).toBeVisible();
   await page.goto("/admin/settings");
-  await page.getByLabel("Store name", { exact: true }).fill("Fieldwork Supply");
+  await page
+    .getByLabel("Store name", { exact: true })
+    .fill("eCommerce Starter");
   await page.getByRole("button", { name: "Save store settings" }).click();
   await expect(page.getByRole("status")).toHaveText("Saved.");
   await page.goto("/admin");

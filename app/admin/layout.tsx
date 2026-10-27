@@ -16,9 +16,9 @@ export default async function Layout({ children }: { children: ReactNode }) {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <a href="/admin" className="brand">
-          f. <span>Store desk</span>
+          e. <span>Store desk</span>
         </a>
-        <p className="eyebrow">FIELDWORK SUPPLY</p>
+        <p className="eyebrow">eCommerce Starter</p>
         <nav aria-label="Administration">
           {[
             ["", "Overview"],

@@ -43,7 +43,7 @@ export default async function Shop({
     `/shop?${new URLSearchParams({ q, category, sort, max: String(max), page: String(n) })}`;
   return (
     <div className="container collection">
-      <span className="eyebrow">THE FIELDWORK COLLECTION</span>
+      <span className="eyebrow">THE COLLECTION</span>
       <h1>Things for living.</h1>
       <p className="intro">
         Useful pieces. Quiet details. A little more intention.

@@ -1,4 +1,4 @@
-# Ecommerce Starter engineering rules
+# eCommerce Starter engineering rules
 
 Read README.md and docs/architecture.md before implementation. This is one independently runnable Next.js Node application.
 
