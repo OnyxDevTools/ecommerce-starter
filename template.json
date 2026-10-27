@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "ecommerce-starter",
+  "name": "Ecommerce Starter",
+  "description": "An Onyx-backed storefront and store desk with products, carts, inventory, orders and optional hosted checkout.",
+  "tags": ["nextjs", "typescript", "ecommerce", "onyx"],
+  "useWhen": [
+    "A small online store needs a self-hosted full-stack application with Onyx persistence"
+  ],
+  "avoidWhen": ["A high-volume or multi-currency marketplace is required"],
+  "capabilities": [
+    "Server-rendered catalog and product galleries",
+    "Guest and verified customer carts and orders",
+    "Durable inventory reservations with recovery",
+    "Optional Stripe Checkout and signed webhooks",
+    "Product and order administration",
+    "React Email preview outbox and optional SMTP"
+  ],
+  "notIncluded": [
+    "Live constrained-inventory checkout without additional verification",
+    "Tax-compliance engine",
+    "Returns and refunds automation",
+    "Hosting infrastructure"
+  ],
+  "preview": {
+    "image": "public/template-preview.png",
+    "route": "/"
+  },
+  "runtime": {
+    "node": ">=24.12.0",
+    "install": "npm ci",
+    "develop": "npm run dev -- --port <assigned-port>",
+    "build": "npm run build",
+    "start": "npm run start -- --port <assigned-port>",
+    "healthPath": "/api/health",
+    "readinessPath": "/api/ready",
+    "requiredEnvironment": [
+      "Existing downloaded Onyx configuration",
+      "Application Firebase configuration and administrator grant",
+      "Explicit demo or Stripe checkout mode"
+    ]
+  },
+  "initialize": "npm run template:init -- --name <project-name> --slug <project-slug>",
+  "instructions": "README.md"
+}

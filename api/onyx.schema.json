@@ -1,0 +1,786 @@
+{
+  "tables": [
+    {
+      "name": "Product",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "slug",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "summary",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "categoryId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "images",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "categoryId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "active",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Variant",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "productId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "sku",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "price",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "currency",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "stock",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "unlimited",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "productId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "active",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Category",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "active",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "StoreSettings",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "currency",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "shipping",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "freeShipping",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "taxBasisPoints",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "discountBasisPoints",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        }
+      ],
+      "indexes": [],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Customer",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "role",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "active",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Cart",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "items",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "version",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "orderId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Order",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "cartId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "customerId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "address",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "currency",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "subtotal",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "discount",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "shipping",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "tax",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "total",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "mode",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "payment",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "fulfillment",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "sessionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "sessionUrl",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        },
+        {
+          "name": "expiresAt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "cartId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "customerId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "OrderLine",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "productId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "variantId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "variant",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "sku",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "unitPrice",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "total",
+          "type": "Int",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "orderId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "productId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "variantId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Reservation",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "variantId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "quantity",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "expiresAt",
+          "type": "String",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "orderId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "variantId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "state",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Webhook",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "eventType",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "sessionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "attempts",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "error",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "orderId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "state",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Notification",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "to",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "subject",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "html",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "attempts",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "orderId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "state",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Media",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "productId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "documentId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "alt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "width",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "height",
+          "type": "Int",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "productId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "CommerceLock",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "owner",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [],
+      "resolvers": [],
+      "triggers": []
+    }
+  ]
+}
